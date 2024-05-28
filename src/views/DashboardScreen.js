@@ -12,7 +12,7 @@ export default function DashboardScreen() {
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      fetch("https://trrx9a6upg.execute-api.us-east-1.amazonaws.com/embed"
+      fetch("https://trrx9a6upg.execute-api.us-east-1.amazonaws.com/embed/anonymous-embed"
       ).then((response) => response.json()
       ).then((response) => {
         setDashboardUrl(response.EmbedUrl)
