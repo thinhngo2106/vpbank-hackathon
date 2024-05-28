@@ -63,9 +63,12 @@ export default function DashboardScreen() {
         <span className="hljs-tag">&lt;&gt;</span><header>
         <h1>Embedded <i>QuickSight</i>: Build Powerful Dashboards in React</h1>
       </header><main>
-            <p>Welcome to the QuickSight dashboard embedding sample page</p>
-            <p>Please pick a dashboard you want to render</p>
-            <div ref="{dashboardRef}">
+      <p>Welcome to the QuickSight dashboard embedding sample page</p>
+        <p>Please pick a dashboard you want to render</p>
+        <select id="dashboard" value="{dashboardId}" onchange="{changeDashboard}">
+          <option value="8251cb16-5ce5-4f3c-bd55-5554beff7bf6">YOUR_DASHBOARD1_NAME</option>
+        </select>
+        <div ref="{dashboardRef}">
             </div></main></>
     );
 }
