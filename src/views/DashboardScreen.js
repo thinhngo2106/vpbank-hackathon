@@ -3,7 +3,7 @@ import * as React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import { createEmbeddingContext } from 'amazon-quicksight-embedding-sdk';
 
-export default function DashboardScreen() {
+function DashboardScreen() {
   const dashboardRef = useRef([]);
   const [dashboardId, setDashboardId] = useState('8251cb16-5ce5-4f3c-bd55-5554beff7bf6');
   const [embeddedDashboard, setEmbeddedDashboard] = useState(null);
@@ -59,16 +59,20 @@ export default function DashboardScreen() {
   }
 
   return (
-        <>
-        <span className="hljs-tag">&lt;&gt;</span><header>
+    <>
+      <header>
         <h1>Embedded <i>QuickSight</i>: Build Powerful Dashboards in React</h1>
-      </header><main>
-      <p>Welcome to the QuickSight dashboard embedding sample page</p>
+      </header>
+      <main>
+        <p>Welcome to the QuickSight dashboard embedding sample page</p>
         <p>Please pick a dashboard you want to render</p>
-        <select id="dashboard" value="{dashboardId}" onchange="{changeDashboard}">
+        <select id='dashboard' value={dashboardId} onChange={changeDashboard}>
           <option value="8251cb16-5ce5-4f3c-bd55-5554beff7bf6">YOUR_DASHBOARD1_NAME</option>
         </select>
-        <div ref="{dashboardRef}">
-            </div></main></>
-    );
-}
+        <div ref={dashboardRef} />
+      </main>
+    </>
+  );
+};
+
+export default DashboardScreen
