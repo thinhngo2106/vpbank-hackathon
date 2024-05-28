@@ -60,7 +60,7 @@ export default function DashboardScreen() {
 
   return (
         <>
-        <span class="hljs-tag">&lt;&gt;</span><header>
+        <span className="hljs-tag">&lt;&gt;</span><header>
         <h1>Embedded <i>QuickSight</i>: Build Powerful Dashboards in React</h1>
       </header><main>
             <p>Welcome to the QuickSight dashboard embedding sample page</p>
