@@ -21,6 +21,30 @@ function Header() {
                     <SearchIcon className="header__searchIcon"/>
                     </button>
                 </div>
+                <div className="header__nav">
+                  <div className="header__option">
+                  <Link to = "/dashboard" style={{textDecoration: 'none'}}>
+                  <button className="btn btn-warning abcd">
+                    <div className="header__option">
+                      <span className="header__optionLineOne">Dashboard</span>
+                    </div>
+                    </button>
+                  </Link>
+                  </div>
+                  <div className="header__option">
+                  <Link to = "/" style={{textDecoration: 'none'}}>
+                  <button className="btn btn-warning abcd">
+                    <div className="header__option">
+                      <span className="header__optionLineOne">Home</span>
+                    </div>
+                    </button>
+                  </Link>
+                  </div>
+                </div>
+    
+ 
+                
+                
             </nav>
     );
 }
