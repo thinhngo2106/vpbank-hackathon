@@ -8,14 +8,17 @@ import {
 
 
 export const listUsers = (
-  pageNumber
+  lastEvaluatedKey
   ) => async (dispatch, getState) => {
     dispatch({ type: USER_LIST_REQUEST });
     try {
-  
-      const { data } = await Axios.get('https://xly6reysoi.execute-api.us-east-1.amazonaws.com/api-vpbank/accounts',);
-
-      console.log(data)
+      
+      const { data } = await Axios.get('https://xly6reysoi.execute-api.us-east-1.amazonaws.com/api-vpbank/accounts', {
+        params: {
+          limit: 10,
+          lastEvaluatedKey: lastEvaluatedKey ? JSON.stringify(lastEvaluatedKey) : null
+        }
+      });
 
       dispatch({ type: USER_LIST_SUCCESS, payload: data });
 

@@ -5,16 +5,29 @@ import {
     } from '../constants/userConstants';
 
 
-export const userListReducer = (state = { loading: true }, action) => {
+  const initialState = {
+    users: [],
+    lastEvaluatedKey: null,
+    status: 'idle',
+    error: null,
+  };
+
+export const userListReducer = (state = { loading: true, users: [], status: 'idle' }, action) => {
   switch (action.type) {
     case USER_LIST_REQUEST:
-      return { loading: true };
+      return { 
+        ...state,
+        loading: true };
     case USER_LIST_SUCCESS:
-      return { loading: false, 
-        users: action.payload
+      return { 
+        ...state,
+        loading: false, 
+        status: 'succeeded',
+        users: [...state.users, ...JSON.parse(action.payload.items)],
+        lastEvaluatedKey: JSON.parse(action.payload.lastEvaluatedKey)
        };
     case USER_LIST_FAIL:
-      return { loading: false, error: action.payload };
+      return { ...state,loading: false, error: action.payload };
     default:
       return state;
   }

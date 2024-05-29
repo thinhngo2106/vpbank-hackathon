@@ -6,7 +6,7 @@
   height: 150px;
   display: flex;
   align-items: center;
-  background-color: rgba(244,203,36,09);
+  background-color: #04885f;
   /* position: sticky; */
   top: 0;
   z-index: 100;
@@ -31,7 +31,7 @@
 .header__searchIcon {
   height: 54px !important;
   border: none;
-  background-color: #cd9042; 
+  background-color: #04885f; 
   border-radius: 3px;
   font-size: 30px !important;
 }
