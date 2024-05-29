@@ -15,4 +15,4 @@ function DashboardScreenAWS() {
   );
 };
 
-export default DashboardScreen
+export default DashboardScreenAWS
