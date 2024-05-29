@@ -3,7 +3,7 @@ import * as React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import { createEmbeddingContext } from 'amazon-quicksight-embedding-sdk';
 
-function DashboardScreen() {
+function DashboardScreenAWS() {
 
   return (
 
