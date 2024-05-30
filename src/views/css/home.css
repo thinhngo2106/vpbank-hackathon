@@ -95,3 +95,91 @@ tr {
 .user_name{
   width: 20%;
 }
+
+.user-table th, .user-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.user-table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 20px 0;
+
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; Chiều cao toàn màn hình */
+  background-color: #f4f7f6;
+  padding: 20px;
+}
+
+/* Kiểu dáng cho bảng */
+.user-table {
+  width: 80%; /* Điều chỉnh theo ý bạn */
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Kiểu dáng cho tiêu đề bảng */
+.user-table th {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Kiểu dáng cho các ô trong bảng */
+.user-table td {
+  border-bottom: 1px solid #dddddd;
+  padding: 12px 15px;
+  font-size: 14px;
+}
+
+/* Hiệu ứng hover cho các hàng */
+.user-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Kiểu dáng cho các hàng chẵn */
+.user-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+/* Kiểu dáng cho nút Send Email */
+.button-send-email {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+.button-send-email:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.button-send-email:focus {
+  outline: none;
+}
+
+.button-send-email:active {
+  background-color: #004494;
+}
+
+.object-button-send-email{
+  justify-content: center !important;
+}

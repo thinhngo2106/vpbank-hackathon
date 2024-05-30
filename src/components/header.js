@@ -14,14 +14,25 @@ function Header() {
                   <img className="header__logo" src= {process.env.PUBLIC_URL+ "/images/logo1.png"} alt="background-img" width={144} height={81} />
                 </Link>
   
-                <div className="header__search"> 
+                {/* <div className="header__search"> 
                   <input className="header__searchInput" placeholder="Search.." name="term" type="text" />
 
                     <button className="search-button" type="submit">
                     <SearchIcon className="header__searchIcon"/>
                     </button>
-                </div>
+                </div> */}
+
+
                 <div className="header__nav">
+                  <div className="header__option">
+                    <Link to = "/" style={{textDecoration: 'none'}}>
+                    <button className="btn btn-warning abcd">
+                      <div className="header__option">
+                        <span className="header__optionLineOne">Home</span>
+                      </div>
+                      </button>
+                    </Link>
+                  </div>
                   <div className="header__option">
                   <Link to = "/dashboard" style={{textDecoration: 'none'}}>
                   <button className="btn btn-warning abcd">
@@ -31,15 +42,7 @@ function Header() {
                     </button>
                   </Link>
                   </div>
-                  <div className="header__option">
-                  <Link to = "/" style={{textDecoration: 'none'}}>
-                  <button className="btn btn-warning abcd">
-                    <div className="header__option">
-                      <span className="header__optionLineOne">Home</span>
-                    </div>
-                    </button>
-                  </Link>
-                  </div>
+
                 </div>
     
  
