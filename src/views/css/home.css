@@ -183,3 +183,14 @@ tr {
 .object-button-send-email{
   justify-content: center !important;
 }
+
+
+.email-container{
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px 10px 10px 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

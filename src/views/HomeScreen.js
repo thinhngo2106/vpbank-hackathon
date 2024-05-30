@@ -110,12 +110,13 @@ export default function HomeScreen(props) {
                             Are you sure you want to send an email to {selectedEmail}?
                             <Form.Group controlId="formEmailContent">
                                 <Form.Label>Email Content</Form.Label>
-                                <Form.Control
-                                as="textarea"
-                                rows={3}
-                                value={emailContent}
-                                onChange={(e) => setEmailContent(e.target.value)}
-                                />
+                                <div className='email-container'>
+                                <p>Subject: Enhance Your Financial Flexibility with Our Credit Solutions!</p>
+                                <p>Dear {selectedEmail},</p>
+                                <p>Unlock your financial potential with BPPBANK exclusive credit products! Enjoy competitive interest rates, flexible repayment options, and high credit limits tailored to your needs. Our quick and easy application process ensures you get the support you need without hassle. Plus, benefit from exclusive rewards with every purchase.
+                                Take control of your financial future today. Click here to learn more or apply now!</p>
+                                <p>Best regards,</p>
+                                </div>
                             </Form.Group>
                             </Form>
                                
